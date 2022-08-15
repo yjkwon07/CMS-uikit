@@ -56,41 +56,33 @@ export const Default: FC = () => {
         <AlertIcon />
         If you want to get the color code, click color box
       </Alert>
-      {COLOR_LIST.map((color) => {
-        if (typeof colorsProps[color] === 'object') {
-          return (
-            <Box>
-              <Heading mb="2" size="md">
-                {color.charAt(0).toUpperCase() + color.slice(1)}
-              </Heading>
-              <HStack spacing={1.5}>
-                {Object.keys(colorsProps[color]).map((number) => (
-                  <Box key={number}>
-                    <Flex align="center" justify="center" direction="column" boxSize="16">
-                      <Box
-                        boxSize="10"
-                        bg={colorsProps[color][number]}
-                        borderRadius="md"
-                        shadow="inner"
-                        onClick={handleCopy(colorsProps[color][number])}
-                      />
-                      <Flex align="center" justify="center">
-                        <Text fontSize="sm" fontWeight="bold">
-                          {number}
-                        </Text>
-                      </Flex>
+      {COLOR_LIST.map((color) => (
+        <Box key={color}>
+          <Heading mb="2" size="md">
+            {color.charAt(0).toUpperCase() + color.slice(1)}
+          </Heading>
+          {typeof colorsProps[color] === 'object' ? (
+            <HStack spacing={1.5}>
+              {Object.keys(colorsProps[color]).map((number) => (
+                <Box key={number}>
+                  <Flex align="center" justify="center" direction="column" boxSize="16">
+                    <Box
+                      boxSize="10"
+                      bg={colorsProps[color][number]}
+                      borderRadius="md"
+                      shadow="inner"
+                      onClick={handleCopy(colorsProps[color][number])}
+                    />
+                    <Flex align="center" justify="center">
+                      <Text fontSize="sm" fontWeight="bold">
+                        {number}
+                      </Text>
                     </Flex>
-                  </Box>
-                ))}
-              </HStack>
-            </Box>
-          );
-        }
-        return (
-          <Box key={color}>
-            <Heading mb="2" size="md">
-              {color.charAt(0).toUpperCase() + color.slice(1)}
-            </Heading>
+                  </Flex>
+                </Box>
+              ))}
+            </HStack>
+          ) : (
             <Flex align="center" justify="center" direction="column" boxSize="16">
               <Box
                 boxSize="10"
@@ -100,9 +92,9 @@ export const Default: FC = () => {
                 onClick={handleCopy(colorsProps[color])}
               />
             </Flex>
-          </Box>
-        );
-      })}
+          )}
+        </Box>
+      ))}
     </Grid>
   );
 };

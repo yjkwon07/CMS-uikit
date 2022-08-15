@@ -1,30 +1,17 @@
-import { shadeColor } from '../utils/shadeColor';
+// https://github.com/yjkwon07/CMS-uikit/issues/2
 
 const colors = {
   brand: {
-    500: '#194BFB',
-    600: shadeColor('#194BFB', -15),
-  },
-  text: '#718096',
-  border: {
-    500: '#E2E8F0',
-    600: shadeColor('#E2E8F0', -15),
-  },
-  gray: {
-    50: '#fafafa',
-    100: '#E2E8F0',
-    500: '#A0AEC0',
-    900: '#1A202C',
-  },
-  black: {
-    600: '#1A202C',
-  },
-  red: {
-    500: '#EB5757',
-  },
-  error: {
-    500: '#E53E3E',
-    600: shadeColor('#E53E3E', -15),
+    50: '#ecf2fe',
+    100: '#d2d7e1',
+    200: '#b7bdc8',
+    300: '#9ba2b0',
+    400: '#808898',
+    500: '#676e7f',
+    600: '#4f5664',
+    700: '#373d48',
+    800: '#20252e',
+    900: '#060c16',
   },
 };
 

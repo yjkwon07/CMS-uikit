@@ -53,7 +53,13 @@ module.exports = {
     'no-alert': 'off',
     'no-constant-condition': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'react/function-component-definition': [2, { namedcomponents: 'arrow-function' }],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',

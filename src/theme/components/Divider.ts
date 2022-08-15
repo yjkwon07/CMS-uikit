@@ -4,7 +4,7 @@ import colors from '../foundations/colors';
 
 const Divider: ComponentStyleConfig = {
   baseStyle: {
-    borderColor: `${colors.border[500]}`,
+    // borderColor: `${colors.border[500]}`,
   },
 };
 

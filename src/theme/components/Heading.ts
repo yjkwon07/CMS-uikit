@@ -1,27 +1,32 @@
 import { ComponentStyleConfig } from '@chakra-ui/react';
 
-export const H1: ComponentStyleConfig = {
-  baseStyle: {
-    fontSize: '24px',
-    fontWeight: '800',
-    lineHeight: '24px',
-    color: `gray.900`,
+const Heading: ComponentStyleConfig = {
+  sizes: {
+    '4xl': {
+      lineHeight: '6.3rem',
+    },
+    '3xl': {
+      lineHeight: '5.3rem',
+    },
+    '2xl': {
+      lineHeight: '4.2rem',
+    },
+    xl: {
+      lineHeight: '3.15rem',
+    },
+    lg: {
+      lineHeight: '2.55rem',
+    },
+    md: {
+      lineHeight: '1.75rem',
+    },
+    sm: {
+      lineHeight: '1.4rem',
+    },
+    xs: {
+      lineHeight: '1.25rem',
+    },
   },
 };
 
-export const H2: ComponentStyleConfig = {
-  baseStyle: {
-    fontSize: '20px',
-    lineHeight: '20px',
-    fontWeight: '800',
-    color: `gray.900`,
-  },
-};
-
-export const H3: ComponentStyleConfig = {
-  baseStyle: {
-    fontSize: '16px',
-    fontWeight: '800',
-    color: `gray.900`,
-  },
-};
+export default Heading;

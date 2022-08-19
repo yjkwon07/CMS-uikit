@@ -1,5 +1,3 @@
-import colors from '../foundations/colors';
-
 export default {
   box: {
     // border: `1px solid ${colors.border[500]}`,

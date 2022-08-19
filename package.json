@@ -28,6 +28,7 @@
     "@chakra-ui/cli": "^2.1.6",
     "@chakra-ui/storybook-addon": "^4.0.6",
     "@emotion/babel-plugin": "^11.10.0",
+    "@fontsource/noto-sans-kr": "^4.5.11",
     "@storybook/addon-a11y": "^6.5.10",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-docs": "^6.5.10",

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Stack, Text } from '@chakra-ui/react';
+import { Box, Heading, Stack, Text, ThemeTypings, useTheme } from '@chakra-ui/react';
 
 export default {
   title: 'Typography/Text',
@@ -9,18 +9,28 @@ export default {
 };
 
 export const Default: FC = () => {
+  return <Text>(default) 가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz</Text>;
+};
+
+export const FontSize: FC = () => {
+  const theme = useTheme();
+
+  const FONT_SIZE_LIST = Object.keys(theme.fontSizes).reverse() as ThemeTypings['fontSizes'][];
+
   return (
     <Stack spacing={3}>
-      <Text fontSize="6xl">(6xl) In Text</Text>
-      <Text fontSize="5xl">(5xl) In Text</Text>
-      <Text fontSize="4xl">(4xl) In Text</Text>
-      <Text fontSize="3xl">(3xl) In Text</Text>
-      <Text fontSize="2xl">(2xl) In Text</Text>
-      <Text fontSize="xl">(xl) In Text</Text>
-      <Text fontSize="lg">(lg) In Text</Text>
-      <Text fontSize="md">(md) In Text</Text>
-      <Text fontSize="sm">(sm) In Text</Text>
-      <Text fontSize="xs">(xs) In Text</Text>
+      {Object.values(FONT_SIZE_LIST).map((fontSize) => (
+        <Box key={fontSize}>
+          <Heading mb="16px" color="cyan.600">
+            ({fontSize})
+          </Heading>
+          <Stack spacing={6}>
+            <Text fontSize={fontSize} bg="blue.100">
+              ({fontSize}) 가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz
+            </Text>
+          </Stack>
+        </Box>
+      ))}
     </Stack>
   );
 };
@@ -44,7 +54,7 @@ export const Truncate: FC = () => {
 
 export const InspectElement: FC = () => {
   return (
-    <>
+    <Box>
       <Text as="i">Italic</Text>
       <br />
       <Text as="u">Underline</Text>
@@ -70,6 +80,6 @@ export const InspectElement: FC = () => {
       <Text as="sub">sub</Text>
       <br />
       <Text as="sup">sup</Text>
-    </>
+    </Box>
   );
 };

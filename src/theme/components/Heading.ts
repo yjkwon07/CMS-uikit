@@ -27,6 +27,9 @@ const Heading: ComponentStyleConfig = {
       lineHeight: '1.25rem',
     },
   },
+  defaultProps: {
+    size: 'xl',
+  },
 };
 
 export default Heading;

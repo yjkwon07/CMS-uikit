@@ -20,6 +20,7 @@ import VStack from './components/VStack';
 import breakpoints from './foundations/breakpoints';
 import colors from './foundations/colors';
 import { sizes } from './foundations/sizes';
+import space from './foundations/space';
 import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './foundations/typography';
 import global from './global';
 import layerStyles from './layerStyles';
@@ -36,6 +37,7 @@ const overrides = {
   fonts,
   letterSpacings,
   lineHeights,
+  space,
   styles: {
     global,
   },

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Stack, Heading, Box } from '@chakra-ui/react';
+import { Stack, Heading, Box, useTheme, ThemeTypings, As, Flex, Alert, AlertIcon } from '@chakra-ui/react';
 
 export default {
   title: 'Typography/Heading',
@@ -13,105 +13,46 @@ export const Default: FC = () => {
 };
 
 export const Size: FC = () => {
+  const theme = useTheme();
+
+  const SIZE_LIST = Object.keys(theme.components.Heading.sizes) as ThemeTypings['components']['Heading']['sizes'][];
+
+  const sizeToAs = {
+    '4xl': 'h1' as As<any>,
+    '3xl': 'h2' as As<any>,
+    '2xl': 'h2' as As<any>,
+    xl: 'h2' as As<any>,
+    lg: 'h3' as As<any>,
+    md: 'h4' as As<any>,
+    sm: 'h5' as As<any>,
+    xs: 'h6' as As<any>,
+  };
+  const defaultAs = 'h2';
+
   return (
-    <Stack spacing={6}>
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h1-4xl)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h1" bg="blue.100" size="4xl">
-            (가나다라마바사아자차카타마파하
-          </Heading>
-          <Heading as="h1" bg="blue.100" size="4xl">
-            abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h2-3xl)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h2" bg="blue.100" size="3xl">
-            가나다라마바사아자차카타마파하
-          </Heading>
-          <Heading as="h2" bg="blue.100" size="3xl">
-            abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h2-2xl)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h2" bg="blue.100" size="2xl">
-            가나다라마바사아자차카타마파하
-          </Heading>
-          <Heading as="h2" bg="blue.100" size="2xl">
-            abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h2-xl)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h2" bg="blue.100" size="xl">
-            가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h3-lg)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h3" bg="blue.100" size="lg">
-            가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h4-md)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h4" bg="blue.100" size="md">
-            가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h5-sm)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h5" bg="blue.100" size="sm">
-            가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-
-      <Box>
-        <Heading mb="16px" color="cyan.600">
-          (h6-xs)
-        </Heading>
-        <Stack spacing={6}>
-          <Heading as="h6" bg="blue.100" size="xs">
-            가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz
-          </Heading>
-        </Stack>
-      </Box>
-    </Stack>
+    <Flex direction="column" rowGap="5" p={4}>
+      <Alert status="info">
+        <AlertIcon />
+        as &apos;h[number]&apos; is no style effect
+      </Alert>
+      <Stack spacing={6}>
+        {Object.values(SIZE_LIST).map((size) => (
+          <Box key={size}>
+            <Heading mb="16px" color="cyan.600">
+              ({(sizeToAs[size] as string) || defaultAs}-{size})
+            </Heading>
+            <Stack spacing={6}>
+              <Heading as={sizeToAs[size] || defaultAs} bg="blue.100" size={size}>
+                (가나다라마바사아자차카타마파하
+              </Heading>
+              <Heading as={sizeToAs[size] || defaultAs} bg="blue.100" size={size}>
+                abcdefghijklmnopqrstuvwxyz
+              </Heading>
+            </Stack>
+          </Box>
+        ))}
+      </Stack>
+    </Flex>
   );
 };
 

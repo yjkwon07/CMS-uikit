@@ -19,6 +19,7 @@ import Text from './components/Text';
 import VStack from './components/VStack';
 import breakpoints from './foundations/breakpoints';
 import colors from './foundations/colors';
+import radii from './foundations/radii';
 import sizes from './foundations/sizes';
 import space from './foundations/space';
 import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './foundations/typography';
@@ -43,6 +44,7 @@ const overrides = {
   },
   breakpoints,
   sizes,
+  radii,
   components: {
     Container,
     Link,

@@ -16,14 +16,14 @@ export const Default: FC = () => {
     (a, b) =>
       Number(radiiProps[a].replace(/(rem|px)/, '')) * (radiiProps[a].includes('rem') ? rootFontSize : 1) -
       Number(radiiProps[b].replace(/(rem|px)/, '')) * (radiiProps[b].includes('rem') ? rootFontSize : 1),
-  ) as ThemeTypings['sizes'][];
+  ) as ThemeTypings['radii'][];
 
   return (
     <Flex direction="column" rowGap="5" p={4}>
       <Table>
         <Thead>
           <Th>Name</Th>
-          <Th>Space</Th>
+          <Th>Radii</Th>
           <Th>Pixels</Th>
           <Th />
         </Thead>

@@ -36,7 +36,7 @@ export const Size: FC = () => {
         as &apos;h[number]&apos; is no style effect
       </Alert>
       <Stack spacing={6}>
-        {Object.values(SIZE_LIST).map((size) => (
+        {SIZE_LIST.map((size) => (
           <Box key={size}>
             <Heading mb="16px" color="cyan.600">
               ({(sizeToAs[size] as string) || defaultAs}-{size})

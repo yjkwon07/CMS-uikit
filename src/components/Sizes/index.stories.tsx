@@ -47,7 +47,7 @@ export const Default: FC = () => {
       <Table>
         <Thead>
           <Th>Name</Th>
-          <Th>Space</Th>
+          <Th>Size</Th>
           <Th>Pixels</Th>
           <Th />
         </Thead>
@@ -66,6 +66,7 @@ export const Default: FC = () => {
               </Td>
             </Tr>
           ))}
+          <Divider />
           {OBJECT_SIZE_LIST.map((sizeKey) =>
             Object.keys(sizesProps[sizeKey]).map((size) => (
               <Tr key={size}>
@@ -84,7 +85,6 @@ export const Default: FC = () => {
               </Tr>
             )),
           )}
-          <Divider />
         </Tbody>
       </Table>
     </Flex>

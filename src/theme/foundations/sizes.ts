@@ -1,6 +1,6 @@
 import space from './space';
 
-export const sizes = {
+const sizes = {
   ...space,
   max: 'max-content',
   min: 'min-content',
@@ -26,3 +26,5 @@ export const sizes = {
     xl: '1280px',
   },
 };
+
+export default sizes;

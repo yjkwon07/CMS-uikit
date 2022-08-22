@@ -19,7 +19,7 @@ export const FontSize: FC = () => {
 
   return (
     <Stack spacing={3}>
-      {Object.values(FONT_SIZE_LIST).map((fontSize) => (
+      {FONT_SIZE_LIST.map((fontSize) => (
         <Box key={fontSize}>
           <Heading mb="16px" color="cyan.600">
             ({fontSize})

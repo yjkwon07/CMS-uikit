@@ -10,10 +10,12 @@ export const Default: FC = () => {
   const theme = useTheme();
 
   const rootFontSize = 16;
-  const SPACE_LIST = Object.keys(theme.space).sort(
+
+  const spaceProps = theme.space;
+  const SPACE_LIST = Object.keys(spaceProps).sort(
     (a, b) =>
-      Number(theme.space[a].replace(/(rem|px)/, '')) * (theme.space[a].includes('rem') ? rootFontSize : 1) -
-      Number(theme.space[b].replace(/(rem|px)/, '')) * (theme.space[b].includes('rem') ? rootFontSize : 1),
+      Number(spaceProps[a].replace(/(rem|px)/, '')) * (spaceProps[a].includes('rem') ? rootFontSize : 1) -
+      Number(spaceProps[b].replace(/(rem|px)/, '')) * (spaceProps[b].includes('rem') ? rootFontSize : 1),
   ) as ThemeTypings['space'][];
 
   return (
@@ -25,17 +27,17 @@ export const Default: FC = () => {
         <Th />
       </Thead>
       <Tbody>
-        {Object.values(SPACE_LIST).map((space) => (
+        {SPACE_LIST.map((space) => (
           <Tr key={space}>
             <Td>{space}</Td>
-            <Td>{theme.space[space]}</Td>
+            <Td>{spaceProps[space]}</Td>
             <Td>
-              {Number(theme.space[space].replace(/(rem|px)/, '')) *
-                (theme.space[space].includes('rem') ? rootFontSize : 1)}
+              {Number(spaceProps[space].replace(/(rem|px)/, '')) *
+                (spaceProps[space].includes('rem') ? rootFontSize : 1)}
               px
             </Td>
             <Td>
-              <Box w={theme.space[space]} h="4" bg="blue.400" />
+              <Box w={spaceProps[space]} h="4" bg="blue.400" />
             </Td>
           </Tr>
         ))}

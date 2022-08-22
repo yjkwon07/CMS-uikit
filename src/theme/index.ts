@@ -23,6 +23,7 @@ import radii from './foundations/radii';
 import sizes from './foundations/sizes';
 import space from './foundations/space';
 import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './foundations/typography';
+import zIndices from './foundations/zIndices';
 import global from './global';
 import layerStyles from './layerStyles';
 
@@ -45,6 +46,7 @@ const overrides = {
   breakpoints,
   sizes,
   radii,
+  zIndices,
   components: {
     Container,
     Link,

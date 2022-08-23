@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import {
   Alert,
   AlertIcon,
@@ -20,7 +18,7 @@ export default {
   title: 'Theme/Sizes',
 };
 
-export const Default: FC = () => {
+export const Default = () => {
   const theme = useTheme();
 
   const rootFontSize = 16;

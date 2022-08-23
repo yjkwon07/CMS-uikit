@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import { Stack, Heading, Box, useTheme, ThemeTypings, As, Flex, Alert, AlertIcon } from '@chakra-ui/react';
 
 export default {
@@ -8,11 +6,11 @@ export default {
   argTypes: {},
 };
 
-export const Default: FC = () => {
+export const Default = () => {
   return <Heading>(default) 가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz</Heading>;
 };
 
-export const Size: FC = () => {
+export const Size = () => {
   const theme = useTheme();
 
   const SIZE_LIST = Object.keys(theme.components.Heading.sizes) as ThemeTypings['components']['Heading']['sizes'][];
@@ -56,6 +54,6 @@ export const Size: FC = () => {
   );
 };
 
-export const Truncate: FC = () => {
+export const Truncate = () => {
   return <Heading noOfLines={1}>Basic text writing, including headings, body text, lists, and more.</Heading>;
 };

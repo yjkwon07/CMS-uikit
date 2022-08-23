@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import { Highlight, Heading, useHighlight, Box, Mark, Text } from '@chakra-ui/react';
 
 export default {
@@ -8,7 +6,7 @@ export default {
   argTypes: {},
 };
 
-export const Default: FC = () => {
+export const Default = () => {
   const chunkList = useHighlight({
     text: 'With the Highlight component, you can spotlight, emphasize and accentuate words instantly',
     query: ['spotlight', 'emphasize', 'accentuate', 'instantly'],
@@ -32,7 +30,7 @@ export const Default: FC = () => {
   );
 };
 
-export const Customizing: FC = () => {
+export const Customizing = () => {
   return (
     <Text>
       <Highlight

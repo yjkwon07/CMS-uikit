@@ -79,6 +79,7 @@ module.exports = {
         },
       },
     ],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.stories.+(js|jsx|ts|tsx)'] }],
     // airbnb ESLint 구성의 문제를 해결하기 위함
     'import/extensions': [
       'error',

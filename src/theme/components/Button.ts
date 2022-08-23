@@ -2,13 +2,14 @@ import type { ComponentStyleConfig } from '@chakra-ui/theme';
 
 const Button: ComponentStyleConfig = {
   baseStyle: {
-    fontWeight: 600,
+    // fontWeight: 600,
   },
   variants: {
-    unstyled: {
-      color: 'text',
-      _hover: { shadow: 'none' },
-    },
+    ghost: {},
+    outline: {},
+    solid: {},
+    link: {},
+    unstyled: {},
   },
   sizes: {
     lg: {
@@ -31,6 +32,7 @@ const Button: ComponentStyleConfig = {
   defaultProps: {
     variant: 'solid',
     size: 'md',
+    colorScheme: 'brand',
   },
 };
 

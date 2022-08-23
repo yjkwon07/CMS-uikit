@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import { Box, Heading, Stack, Text, ThemeTypings, useTheme } from '@chakra-ui/react';
 
 export default {
@@ -8,11 +6,11 @@ export default {
   argTypes: {},
 };
 
-export const Default: FC = () => {
+export const Default = () => {
   return <Text>(default) 가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz</Text>;
 };
 
-export const FontSize: FC = () => {
+export const FontSize = () => {
   const theme = useTheme();
 
   const FONT_SIZE_LIST = Object.keys(theme.fontSizes).reverse() as ThemeTypings['fontSizes'][];
@@ -35,7 +33,7 @@ export const FontSize: FC = () => {
   );
 };
 
-export const Truncate: FC = () => {
+export const Truncate = () => {
   return (
     <>
       {/* Basic version */}
@@ -52,7 +50,7 @@ export const Truncate: FC = () => {
   );
 };
 
-export const InspectElement: FC = () => {
+export const InspectElement = () => {
   return (
     <Box>
       <Text as="i">Italic</Text>

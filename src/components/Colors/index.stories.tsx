@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import {
   Alert,
@@ -19,7 +19,7 @@ export default {
   title: 'Theme/Colors',
 };
 
-export const Default: FC = () => {
+export const Default = () => {
   const [color, setColor] = useState('');
   const { hasCopied, value, onCopy } = useClipboard(color);
 

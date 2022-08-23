@@ -1,12 +1,10 @@
-import { FC } from 'react';
-
 import { Box, Table, Tbody, Td, Th, Thead, ThemeTypings, Tr, useTheme } from '@chakra-ui/react';
 
 export default {
   title: 'Theme/Space',
 };
 
-export const Default: FC = () => {
+export const Default = () => {
   const theme = useTheme();
 
   const rootFontSize = 16;

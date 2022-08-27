@@ -3,6 +3,7 @@ import {
   Divider,
   Flex,
   Heading,
+  Icon,
   IconButton,
   Stack,
   ThemeTypings,
@@ -21,7 +22,7 @@ export default {
 };
 
 export const Default = () => {
-  return <IconButton aria-label="Search database" icon={<FaSearchIcon />} />;
+  return <IconButton aria-label="Search database" icon={<Icon as={FaSearchIcon} />} />;
 };
 
 export const SizeVariant = () => {
@@ -36,17 +37,46 @@ export const SizeVariant = () => {
       {VARIANT_LIST.map((variant) => (
         <Box key={variant}>
           <Heading mb="16px">{variant.toUpperCase()}</Heading>
-          {SIZE_LIST.map((size) => (
+          <Box mb="2">
+            {SIZE_LIST.map((size) => (
+              <IconButton
+                key={size}
+                mr="10px"
+                aria-label="Search database"
+                icon={<Icon as={FaSearchIcon} />}
+                size={size}
+                variant={variant}
+              />
+            ))}
             <IconButton
-              key={size}
-              mr="10px"
               aria-label="Search database"
-              icon={<FaSearchIcon />}
-              size={size}
+              disabled
+              icon={<Icon as={FaSearchIcon} />}
+              size="xs"
               variant={variant}
             />
-          ))}
-          <IconButton aria-label="Search database" disabled icon={<FaSearchIcon />} size="xs" variant={variant} />
+          </Box>
+          <Box>
+            {SIZE_LIST.map((size) => (
+              <IconButton
+                key={size}
+                mr="10px"
+                aria-label="Search database"
+                icon={<Icon as={FaSearchIcon} />}
+                isRound
+                size={size}
+                variant={variant}
+              />
+            ))}
+            <IconButton
+              aria-label="Search database"
+              disabled
+              icon={<Icon as={FaSearchIcon} />}
+              isRound
+              size="xs"
+              variant={variant}
+            />
+          </Box>
         </Box>
       ))}
     </Stack>
@@ -73,12 +103,17 @@ export const ColorScheme = () => {
             bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
             bgPosition="center"
           >
-            <IconButton aria-label="Search database" colorScheme={colorScheme} icon={<FaSearchIcon />} size="sm" />
+            <IconButton
+              aria-label="Search database"
+              colorScheme={colorScheme}
+              icon={<Icon as={FaSearchIcon} />}
+              size="sm"
+            />
             <IconButton
               aria-label="Search database"
               colorScheme={colorScheme}
               disabled
-              icon={<FaSearchIcon />}
+              icon={<Icon as={FaSearchIcon} />}
               size="xs"
             />
           </Flex>
@@ -92,10 +127,10 @@ export const Loading = () => {
   return (
     <Flex direction="column" rowGap={10}>
       <Flex columnGap={10}>
-        <IconButton aria-label="Search database" icon={<FaSearchIcon />} isLoading />
+        <IconButton aria-label="Search database" icon={<Icon as={FaSearchIcon} />} isLoading />
         <IconButton
           aria-label="Search database"
-          icon={<FaSearchIcon />}
+          icon={<Icon as={FaSearchIcon} />}
           isLoading
           spinner={<BeatLoader size={8} color="white" />}
         />
@@ -116,26 +151,56 @@ export const Anchors = () => {
       {VARIANT_LIST.map((variant) => (
         <Box key={variant}>
           <Heading mb="16px">{variant.toUpperCase()}</Heading>
-          {SIZE_LIST.map((size) => (
+          <Box mb="2">
+            {SIZE_LIST.map((size) => (
+              <IconButton
+                key={size}
+                as="a"
+                mr="10px"
+                aria-label="Search database"
+                href="https://www.naver.com"
+                icon={<Icon as={FaSearchIcon} />}
+                size={size}
+                variant={variant}
+              >
+                dd
+              </IconButton>
+            ))}
             <IconButton
-              key={size}
               as="a"
-              mr="10px"
               aria-label="Search database"
+              disabled
               href="https://www.naver.com"
-              icon={<FaSearchIcon />}
-              size={size}
+              icon={<Icon as={FaSearchIcon} />}
+              size="xs"
               variant={variant}
             />
-          ))}
-          <IconButton
-            as="a"
-            aria-label="Search database"
-            disabled
-            icon={<FaSearchIcon />}
-            size="xs"
-            variant={variant}
-          />
+          </Box>
+          <Box>
+            {SIZE_LIST.map((size) => (
+              <IconButton
+                key={size}
+                as="a"
+                mr="10px"
+                aria-label="Search database"
+                href="https://www.naver.com"
+                icon={<Icon as={FaSearchIcon} />}
+                isRound
+                size={size}
+                variant={variant}
+              />
+            ))}
+            <IconButton
+              as="a"
+              aria-label="Search database"
+              disabled
+              href="https://www.naver.com"
+              icon={<Icon as={FaSearchIcon} />}
+              isRound
+              size="xs"
+              variant={variant}
+            />
+          </Box>
         </Box>
       ))}
     </Stack>
@@ -147,7 +212,13 @@ export const BrowserLink = () => {
     <Flex direction="column" rowGap={10}>
       <BrowserRouter basename="">
         <Box>
-          <IconButton as={Link} aria-label="Search database" icon={<FaSearchIcon />} to="/" variant="outline" />
+          <IconButton
+            as={Link}
+            aria-label="Search database"
+            icon={<Icon as={FaSearchIcon} />}
+            to="/"
+            variant="outline"
+          />
         </Box>
       </BrowserRouter>
     </Flex>

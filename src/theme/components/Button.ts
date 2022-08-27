@@ -1,9 +1,7 @@
 import type { ComponentStyleConfig } from '@chakra-ui/theme';
 
 const Button: ComponentStyleConfig = {
-  baseStyle: {
-    // fontWeight: 600,
-  },
+  baseStyle: {},
   variants: {
     ghost: {},
     outline: {},
@@ -14,19 +12,23 @@ const Button: ComponentStyleConfig = {
   sizes: {
     lg: {
       height: '55px',
-      padding: '0 26px',
+      px: '26px',
+      minW: 14,
     },
     md: {
       height: '48px',
-      padding: '0 24px',
+      px: '24px',
+      minW: 12,
     },
     sm: {
       height: '32px',
-      padding: '0 16px',
+      px: '16px',
+      minW: 8,
     },
     xs: {
       height: '20px',
-      padding: '0 8px',
+      px: '8px',
+      minW: 6,
     },
   },
   defaultProps: {

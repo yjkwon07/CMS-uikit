@@ -1,4 +1,16 @@
-import { Box, Button, Divider, Flex, Heading, Stack, ThemeTypings, useTheme, Wrap, WrapItem } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Heading,
+  Icon,
+  Stack,
+  ThemeTypings,
+  useTheme,
+  Wrap,
+  WrapItem,
+} from '@chakra-ui/react';
 import { FaArrowRight as FaArrowRightIcon } from 'react-icons/fa';
 import { MdOutlineEmail as MdOutlineEmailIcon } from 'react-icons/md';
 import { BrowserRouter, Link } from 'react-router-dom';
@@ -77,9 +89,9 @@ export const WidthIcons = () => {
   return (
     <Flex direction="column" rowGap={10}>
       <Flex columnGap={10}>
-        <Button leftIcon={<MdOutlineEmailIcon />}>Button</Button>
-        <Button rightIcon={<FaArrowRightIcon />}>Button</Button>
-        <Button leftIcon={<MdOutlineEmailIcon />} rightIcon={<FaArrowRightIcon />}>
+        <Button leftIcon={<Icon as={MdOutlineEmailIcon} />}>Button</Button>
+        <Button rightIcon={<Icon as={FaArrowRightIcon} />}>Button</Button>
+        <Button leftIcon={<Icon as={MdOutlineEmailIcon} />} rightIcon={<Icon as={FaArrowRightIcon} />}>
           Button
         </Button>
       </Flex>

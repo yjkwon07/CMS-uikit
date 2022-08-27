@@ -2,6 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 import Avatar from './components/Avatar';
 import Badge from './components/Badge';
+import Box from './components/Box';
 import Button from './components/Button';
 import Checkbox from './components/Checkbox';
 import Container from './components/Container';
@@ -48,23 +49,24 @@ const overrides = {
   radii,
   zIndices,
   components: {
+    Avatar,
+    Badge,
+    Box,
+    Button,
+    Checkbox,
     Container,
-    Link,
+    Divider,
     Heading,
     Highlight,
-    Mark,
-    Text,
-    Button,
     Input,
-    Checkbox,
-    Select,
-    Badge,
-    Divider,
-    VStack,
-    Avatar,
-    Tabs,
-    Table,
+    Link,
+    Mark,
     Modal,
+    Select,
+    Table,
+    Tabs,
+    Text,
+    VStack,
   },
 };
 

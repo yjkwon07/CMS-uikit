@@ -9,7 +9,7 @@ export default {
 export const Default = () => {
   return (
     <Stack spacing={10}>
-      <Box color="white" bg="brand.600">
+      <Box>
         <Text>(default) 가나다라마바사아자차카타마파하 abcdefghijklmnopqrstuvwxyz</Text>
       </Box>
       <Box color="rgba(137, 137, 137)" bg="#33f3f3">

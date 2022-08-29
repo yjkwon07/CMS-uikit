@@ -8,6 +8,7 @@ import Checkbox from './components/Checkbox';
 import Container from './components/Container';
 import Divider from './components/Divider';
 import Flex from './components/Flex';
+import Grid from './components/Grid';
 import Heading from './components/Heading';
 import Highlight from './components/Highlight';
 import Input from './components/Input';
@@ -58,6 +59,7 @@ const overrides = {
     Container,
     Divider,
     Flex,
+    Grid,
     Heading,
     Highlight,
     Input,

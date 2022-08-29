@@ -16,6 +16,7 @@ import Link from './components/Link';
 import Mark from './components/Mark';
 import Modal from './components/Modal';
 import Select from './components/Select';
+import SimpleGrid from './components/SimpleGrid';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
 import Text from './components/Text';
@@ -67,6 +68,7 @@ const overrides = {
     Mark,
     Modal,
     Select,
+    SimpleGrid,
     Table,
     Tabs,
     Text,

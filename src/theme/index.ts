@@ -2,13 +2,10 @@ import { extendTheme } from '@chakra-ui/react';
 
 import Avatar from './components/Avatar';
 import Badge from './components/Badge';
-import Box from './components/Box';
 import Button from './components/Button';
 import Checkbox from './components/Checkbox';
 import Container from './components/Container';
 import Divider from './components/Divider';
-import Flex from './components/Flex';
-import Grid from './components/Grid';
 import Heading from './components/Heading';
 import Highlight from './components/Highlight';
 import Input from './components/Input';
@@ -16,7 +13,6 @@ import Link from './components/Link';
 import Mark from './components/Mark';
 import Modal from './components/Modal';
 import Select from './components/Select';
-import SimpleGrid from './components/SimpleGrid';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
 import Text from './components/Text';
@@ -54,13 +50,10 @@ const overrides = {
   components: {
     Avatar,
     Badge,
-    Box,
     Button,
     Checkbox,
     Container,
     Divider,
-    Flex,
-    Grid,
     Heading,
     Highlight,
     Input,
@@ -68,7 +61,6 @@ const overrides = {
     Mark,
     Modal,
     Select,
-    SimpleGrid,
     Table,
     Tabs,
     Text,

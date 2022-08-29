@@ -16,7 +16,6 @@ import Select from './components/Select';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
 import Text from './components/Text';
-import VStack from './components/VStack';
 import breakpoints from './foundations/breakpoints';
 import colors from './foundations/colors';
 import radii from './foundations/radii';
@@ -64,7 +63,6 @@ const overrides = {
     Table,
     Tabs,
     Text,
-    VStack,
   },
 };
 

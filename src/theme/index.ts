@@ -7,15 +7,12 @@ import Checkbox from './components/Checkbox';
 import Container from './components/Container';
 import Divider from './components/Divider';
 import Heading from './components/Heading';
-import Highlight from './components/Highlight';
 import Input from './components/Input';
 import Link from './components/Link';
-import Mark from './components/Mark';
 import Modal from './components/Modal';
 import Select from './components/Select';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
-import Text from './components/Text';
 import breakpoints from './foundations/breakpoints';
 import colors from './foundations/colors';
 import radii from './foundations/radii';
@@ -54,15 +51,12 @@ const overrides = {
     Container,
     Divider,
     Heading,
-    Highlight,
     Input,
     Link,
-    Mark,
     Modal,
     Select,
     Table,
     Tabs,
-    Text,
   },
 };
 

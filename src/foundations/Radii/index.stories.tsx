@@ -1,7 +1,7 @@
 import { Box, Flex, Table, Tbody, Td, Th, Thead, ThemeTypings, Tr, useTheme } from '@chakra-ui/react';
 
 export default {
-  title: 'Theme/Radii',
+  title: 'Foundations/Radii',
 };
 
 export const Default = () => {

@@ -7,7 +7,9 @@ const Button: ComponentStyleConfig = {
     outline: {},
     solid: {},
     link: {},
-    unstyled: {},
+    unstyled: {
+      display: 'inline-flex',
+    },
   },
   sizes: {
     lg: {
@@ -26,7 +28,7 @@ const Button: ComponentStyleConfig = {
       minW: 8,
     },
     xs: {
-      height: '20px',
+      height: 6,
       px: '8px',
       minW: 6,
     },
@@ -34,7 +36,6 @@ const Button: ComponentStyleConfig = {
   defaultProps: {
     variant: 'solid',
     size: 'md',
-    colorScheme: 'brand',
   },
 };
 

@@ -1,7 +1,7 @@
 import { Box, Table, Tbody, Td, Th, Thead, ThemeTypings, Tr, useTheme } from '@chakra-ui/react';
 
 export default {
-  title: 'Theme/Space',
+  title: 'Foundations/Space',
 };
 
 export const Default = () => {

@@ -1,7 +1,7 @@
 import { Flex, Table, Tbody, Td, Th, Thead, ThemeTypings, Tr, useTheme } from '@chakra-ui/react';
 
 export default {
-  title: 'Theme/ZIndices',
+  title: 'Foundations/ZIndices',
 };
 
 export const Default = () => {

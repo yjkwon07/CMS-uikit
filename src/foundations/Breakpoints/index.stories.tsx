@@ -1,7 +1,7 @@
 import { Alert, AlertIcon, Box, Flex, Text, ThemeTypings, useBreakpoint, useTheme } from '@chakra-ui/react';
 
 export default {
-  title: 'Theme/Breakpoints',
+  title: 'Foundations/Breakpoints',
 };
 
 export const Default = () => {

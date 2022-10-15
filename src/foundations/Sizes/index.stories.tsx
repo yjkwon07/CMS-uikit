@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 
 export default {
-  title: 'Theme/Sizes',
+  title: 'Foundations/Sizes',
 };
 
 export const Default = () => {

@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 
 export default {
-  title: 'Theme/Colors',
+  title: 'Foundations/Colors',
 };
 
 export const Default = () => {

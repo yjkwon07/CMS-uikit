@@ -1,17 +1,15 @@
 import type { ComponentStyleConfig } from '@chakra-ui/theme';
 
 const Checkbox: ComponentStyleConfig = {
-  baseStyle: {
-    control: {
-      bg: 'white',
+  parts: ['icon', 'container', 'control', 'label'],
+  baseStyle: {},
+  sizes: {
+    xl: {
+      control: { w: 6, h: 6 },
+      label: { fontSize: 'xl' },
     },
   },
-  sizes: {
-    xl: { control: { w: 6, h: 6 } },
-  },
-  defaultProps: {
-    colorScheme: 'brand',
-  },
+  defaultProps: {},
 };
 
 export default Checkbox;

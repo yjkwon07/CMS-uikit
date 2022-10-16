@@ -1,4 +1,4 @@
-import { Box, Flex, Table, Tbody, Td, Th, Thead, ThemeTypings, Tr, useTheme } from '@chakra-ui/react';
+import { Alert, AlertIcon, Box, Flex, Table, Tbody, Td, Th, Thead, ThemeTypings, Tr, useTheme } from '@chakra-ui/react';
 
 export default {
   title: 'Foundations/Blur',
@@ -12,6 +12,11 @@ export const Default = () => {
 
   return (
     <Flex direction="column" rowGap="5" p={4}>
+      <Alert status="info">
+        <AlertIcon />
+        To apply blur, brightness, contrast, hueRotate, invert, saturate props on the element, set filter prop value to
+        &quot;auto&quot;.
+      </Alert>
       <Table>
         <Thead>
           <Th>Name</Th>

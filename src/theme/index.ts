@@ -16,6 +16,7 @@ import Tabs from './components/Tabs';
 import breakpoints from './foundations/breakpoints';
 import colors from './foundations/colors';
 import radii from './foundations/radii';
+import shadows from './foundations/shadows';
 import sizes from './foundations/sizes';
 import space from './foundations/space';
 import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './foundations/typography';
@@ -24,25 +25,22 @@ import global from './global';
 import layerStyles from './layerStyles';
 
 const overrides = {
-  shadows: {
-    outline: `0 0 0 1px brand`,
-    md: '0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.1)',
+  styles: {
+    global,
   },
-  layerStyles,
+  breakpoints,
+  zIndices,
+  radii,
   colors,
+  layerStyles,
   fontSizes,
   fontWeights,
   fonts,
   letterSpacings,
   lineHeights,
-  space,
-  styles: {
-    global,
-  },
-  breakpoints,
   sizes,
-  radii,
-  zIndices,
+  shadows,
+  space,
   components: {
     Avatar,
     Badge,

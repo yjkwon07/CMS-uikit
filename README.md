@@ -46,6 +46,24 @@ npm run storybook
 
 ### components
 
+- **Layout**
+  - [Aspect Ratio](https://github.com/yjkwon07/CMS-uikit/issues/48)
+  - [Box](https://github.com/yjkwon07/CMS-uikit/issues/31)
+  - [Center](https://github.com/yjkwon07/CMS-uikit/issues/40)
+    - Square
+    - Circle
+  - [Container](https://github.com/yjkwon07/CMS-uikit/issues/42) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/components/Container.ts)
+  - [Flex](https://github.com/yjkwon07/CMS-uikit/issues/33)
+    - Spacer
+  - [Grid](https://github.com/yjkwon07/CMS-uikit/issues/36)
+    - GridItem
+  - [SimpleGrid](https://github.com/yjkwon07/CMS-uikit/issues/38)
+  - [Stack](https://github.com/yjkwon07/CMS-uikit/issues/44)
+    - HStack
+    - VStack
+  - [Wrap](https://github.com/yjkwon07/CMS-uikit/issues/46)
+    - WrapItem
+  
 - **Typography**
   - [Text](https://github.com/yjkwon07/CMS-uikit/issues/2)
   - [Heading](https://github.com/yjkwon07/CMS-uikit/issues/2) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/components/Heading.ts)

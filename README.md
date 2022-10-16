@@ -7,6 +7,10 @@ npm run storybook
 
 ## doc
 
+```
+🎨: theme extend able & code
+```
+
 ### 궁금했던 이슈들
 
 - [The 'sx' props ?](https://github.com/yjkwon07/CMS-uikit/issues/8)
@@ -16,10 +20,10 @@ npm run storybook
 
 - [colors](https://github.com/yjkwon07/CMS-uikit/issues/2) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/foundations/colors.ts)
 
-- [fonts (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7)
-- [fontSizes (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7)
-- [fontWeights (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7)
-- [lineHeights (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7)
+- [fonts (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/foundations/typography.ts)
+- [fontSizes (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/foundations/typography.ts)
+- [fontWeights (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/foundations/typography.ts)
+- [lineHeights (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/foundations/typography.ts)
 - [letterSpacings (foundations > typography)](https://github.com/yjkwon07/CMS-uikit/issues/7) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/foundations/typography.ts)
 
 - [breakpoints](https://github.com/yjkwon07/CMS-uikit/issues/14) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/foundations/breakpoints.ts)
@@ -42,13 +46,13 @@ npm run storybook
 
 ### components
 
-- Typography
+- **Typography**
   - [Text](https://github.com/yjkwon07/CMS-uikit/issues/2)
   - [Heading](https://github.com/yjkwon07/CMS-uikit/issues/2) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/components/Heading.ts)
   - [Highlight](https://github.com/yjkwon07/CMS-uikit/issues/2)
 
-- Media and Icons
+- **Media and Icons**
   - [Icon](https://github.com/yjkwon07/CMS-uikit/issues/29)
 
-- Forms
+- **Forms**
   - [Button](https://github.com/yjkwon07/CMS-uikit/issues/1) [🎨](https://github.com/yjkwon07/CMS-uikit/blob/master/src/theme/components/Button.ts)

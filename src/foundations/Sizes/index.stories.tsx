@@ -46,7 +46,7 @@ export const Default = () => {
         <Thead>
           <Th>Name</Th>
           <Th>Size</Th>
-          <Th>Pixels</Th>
+          <Th>Pixel</Th>
           <Th />
         </Thead>
         <Tbody>

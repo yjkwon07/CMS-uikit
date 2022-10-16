@@ -21,7 +21,7 @@ export const Default = () => {
       <Thead>
         <Th>Name</Th>
         <Th>Space</Th>
-        <Th>Pixels</Th>
+        <Th>Pixel</Th>
         <Th />
       </Thead>
       <Tbody>

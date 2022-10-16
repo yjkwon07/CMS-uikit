@@ -14,6 +14,7 @@ import Select from './components/Select';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
 import blur from './foundations/blur';
+import borders from './foundations/borders';
 import breakpoints from './foundations/breakpoints';
 import colors from './foundations/colors';
 import radii from './foundations/radii';
@@ -43,6 +44,7 @@ const overrides = {
   sizes,
   shadows,
   space,
+  borders,
   components: {
     Avatar,
     Badge,

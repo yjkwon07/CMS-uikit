@@ -13,6 +13,7 @@ import Modal from './components/Modal';
 import Select from './components/Select';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
+import blur from './foundations/blur';
 import breakpoints from './foundations/breakpoints';
 import colors from './foundations/colors';
 import radii from './foundations/radii';
@@ -31,6 +32,7 @@ const overrides = {
   breakpoints,
   zIndices,
   radii,
+  blur,
   colors,
   layerStyles,
   fontSizes,

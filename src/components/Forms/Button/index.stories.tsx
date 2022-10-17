@@ -89,7 +89,9 @@ export const WidthIcons = () => {
   return (
     <Flex direction="column" rowGap={10}>
       <Flex columnGap={10}>
-        <Button leftIcon={<Icon as={MdOutlineEmailIcon} />}>Button</Button>
+        <Button fontSize={{ base: 'xx-small', xs: 'xs', sm: 'md' }} leftIcon={<Icon as={MdOutlineEmailIcon} />}>
+          Button
+        </Button>
         <Button rightIcon={<Icon as={FaArrowRightIcon} />}>Button</Button>
         <Button leftIcon={<Icon as={MdOutlineEmailIcon} />} rightIcon={<Icon as={FaArrowRightIcon} />}>
           Button

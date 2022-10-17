@@ -1,5 +1,7 @@
 // https://github.com/yjkwon07/CMS-uikit/issues/2
 
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/colors.ts */
+
 const colors = {
   brand: {
     50: '#ecf2fe',

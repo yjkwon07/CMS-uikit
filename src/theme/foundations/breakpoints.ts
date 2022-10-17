@@ -1,3 +1,5 @@
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/breakpoints.ts */
+
 const breakpoints = {
   base: '0px',
   xs: '480px',

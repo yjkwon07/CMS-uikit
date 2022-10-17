@@ -1,3 +1,5 @@
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/shadows.ts */
+
 const shadows = {
   xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
   sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',

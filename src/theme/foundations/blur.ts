@@ -1,3 +1,5 @@
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/blur.ts */
+
 const blur = {
   none: 0,
   sm: '4px',

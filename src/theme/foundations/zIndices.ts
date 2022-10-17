@@ -1,3 +1,5 @@
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/z-index.ts */
+
 const zIndices = {
   hide: -1,
   auto: 'auto',

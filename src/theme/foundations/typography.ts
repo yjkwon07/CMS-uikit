@@ -1,3 +1,5 @@
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/typography.ts */
+
 export const fonts = {
   body: 'Noto Sans KR, sans-serif',
   heading: 'Noto Sans KR, serif',

@@ -22,6 +22,8 @@ const transitionDuration = {
   'ultra-slow': '500ms',
 };
 
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/transition.ts */
+
 const transition = {
   property: transitionProperty,
   easing: transitionTimingFunction,

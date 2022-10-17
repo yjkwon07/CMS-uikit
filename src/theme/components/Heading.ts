@@ -1,5 +1,7 @@
 import { ComponentStyleConfig } from '@chakra-ui/react';
 
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/components/heading.ts */
+
 const Heading: ComponentStyleConfig = {
   sizes: {
     '4xl': {

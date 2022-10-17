@@ -1,5 +1,7 @@
 import space from './space';
 
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/sizes.ts */
+
 const sizes = {
   ...space,
   max: 'max-content',

@@ -1,3 +1,5 @@
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/spacing.ts */
+
 const space = {
   px: '1px',
   0.5: '0.125rem',

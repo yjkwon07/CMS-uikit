@@ -1,3 +1,5 @@
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/foundations/radius.ts */
+
 const radii = {
   none: '0',
   sm: '0.125rem',

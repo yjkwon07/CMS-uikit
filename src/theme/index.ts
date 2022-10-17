@@ -6,6 +6,7 @@ import Button from './components/Button';
 import Checkbox from './components/Checkbox';
 import Container from './components/Container';
 import Divider from './components/Divider';
+import Editable from './components/Editable';
 import Heading from './components/Heading';
 import Input from './components/Input';
 import Link from './components/Link';
@@ -30,6 +31,7 @@ const overrides = {
     Checkbox,
     Container,
     Divider,
+    Editable,
     Heading,
     Input,
     Link,

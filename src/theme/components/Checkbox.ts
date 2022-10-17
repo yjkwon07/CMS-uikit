@@ -9,6 +9,7 @@ const Checkbox: ComponentStyleConfig = {
       label: { fontSize: 'xl' },
     },
   },
+  variants: {},
   defaultProps: {},
 };
 

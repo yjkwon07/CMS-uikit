@@ -33,7 +33,7 @@ export const SizeVariant = () => {
 
   const inputProps = theme.components.Input;
   const VARIANT_LIST = Object.keys(inputProps.variants) as ThemeTypings['components']['Input']['variants'][];
-  const SIZE_LIST = Object.keys(inputProps.sizes) as ThemeTypings['components']['Button']['sizes'][];
+  const SIZE_LIST = Object.keys(inputProps.sizes) as ThemeTypings['components']['Input']['sizes'][];
 
   return (
     <Stack divider={<Divider />} spacing={3}>

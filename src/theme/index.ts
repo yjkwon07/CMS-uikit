@@ -11,6 +11,7 @@ import Heading from './components/Heading';
 import Input from './components/Input';
 import Link from './components/Link';
 import Modal from './components/Modal';
+import NumberInput from './components/NumberInput';
 import Select from './components/Select';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
@@ -36,6 +37,7 @@ const overrides = {
     Input,
     Link,
     Modal,
+    NumberInput,
     Select,
     Table,
     Tabs,

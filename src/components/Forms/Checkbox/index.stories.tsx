@@ -55,7 +55,7 @@ export const ColorScheme = () => {
   );
 };
 
-export const Sizes = () => {
+export const Size = () => {
   const theme = useTheme();
 
   const checkboxProps = theme.components.Checkbox;

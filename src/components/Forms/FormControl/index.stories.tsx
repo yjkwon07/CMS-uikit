@@ -7,6 +7,7 @@ import {
   Checkbox,
   CheckboxGroup,
   Divider,
+  Flex,
   FormControl,
   FormErrorMessage,
   FormHelperText,
@@ -26,6 +27,8 @@ import {
   ThemeTypings,
   useTheme,
   VStack,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 
 export default {
@@ -66,9 +69,51 @@ export const SizeVariant = () => {
                 <FormHelperText>We&apos;ll never share your email.</FormHelperText>
               </FormControl>
             ))}
+            <FormControl isDisabled>
+              <FormLabel>Disabled</FormLabel>
+              <Input type="email" />
+              <FormHelperText>Disabled</FormHelperText>
+            </FormControl>
           </Box>
         ))}
     </Stack>
+  );
+};
+
+export const ColorScheme = () => {
+  const theme = useTheme();
+
+  const colorsProps = theme.colors;
+  const COLOR_LIST = Object.keys(colorsProps).filter(
+    (color) => typeof colorsProps[color] === 'object',
+  ) as ThemeTypings['colors'][];
+
+  return (
+    <Wrap spacing={4}>
+      {COLOR_LIST.map((colorScheme) => (
+        <WrapItem key={colorScheme}>
+          <Flex
+            align="center"
+            justify="center"
+            direction="column"
+            rowGap={3}
+            bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
+            bgPosition="center"
+          >
+            <FormControl colorScheme={colorScheme}>
+              <FormLabel>{colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}</FormLabel>
+              <Input type="email" />
+              <FormHelperText>{colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}</FormHelperText>
+            </FormControl>
+            <FormControl colorScheme={colorScheme} isDisabled>
+              <FormLabel>Disabled</FormLabel>
+              <Input type="email" />
+              <FormHelperText>Disabled</FormHelperText>
+            </FormControl>
+          </Flex>
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 };
 

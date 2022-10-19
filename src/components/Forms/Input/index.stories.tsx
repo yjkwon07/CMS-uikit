@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Divider,
+  Flex,
   Heading,
   Input,
   InputGroup,
@@ -16,6 +17,8 @@ import {
   Text,
   ThemeTypings,
   useTheme,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 
 export default {
@@ -41,19 +44,45 @@ export const SizeVariant = () => {
         <Box key={variant}>
           <Heading mb="16px">{variant.toUpperCase()}</Heading>
           {SIZE_LIST.map((size) => (
-            <Input
-              key={size}
-              mb="10px"
-              colorScheme="red"
-              placeholder={size.toUpperCase()}
-              size={size}
-              variant={variant}
-            />
+            <Input key={size} mb="10px" placeholder={size.toUpperCase()} size={size} variant={variant} />
           ))}
           <Input isDisabled placeholder="DISABLED" size="xs" variant={variant} />
         </Box>
       ))}
     </Stack>
+  );
+};
+
+export const ColorScheme = () => {
+  const theme = useTheme();
+
+  const colorsProps = theme.colors;
+  const COLOR_LIST = Object.keys(colorsProps).filter(
+    (color) => typeof colorsProps[color] === 'object',
+  ) as ThemeTypings['colors'][];
+
+  return (
+    <Wrap spacing={4}>
+      {COLOR_LIST.map((colorScheme) => (
+        <WrapItem key={colorScheme}>
+          <Flex
+            align="center"
+            justify="center"
+            direction="column"
+            rowGap={3}
+            bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
+            bgPosition="center"
+          >
+            <Input
+              colorScheme={colorScheme}
+              placeholder={colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}
+              size="sm"
+            />
+            <Input colorScheme={colorScheme} isDisabled placeholder="Disabled" size="xs" />
+          </Flex>
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 };
 

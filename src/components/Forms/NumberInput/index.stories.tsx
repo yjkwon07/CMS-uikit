@@ -22,6 +22,8 @@ import {
   ThemeTypings,
   useNumberInput,
   useTheme,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 
 export default {
@@ -95,12 +97,59 @@ export const SizeVariant = () => {
                   <NumberDecrementStepper />
                 </NumberInputStepper>
               </NumberInput>
-              <Text>Disabled</Text>
+              <Text>{size.toUpperCase()}</Text>
             </HStack>
           ))}
         </Stack>
       )}
     </Stack>
+  );
+};
+
+export const ColorScheme = () => {
+  const theme = useTheme();
+
+  const colorsProps = theme.colors;
+  const COLOR_LIST = Object.keys(colorsProps).filter(
+    (color) => typeof colorsProps[color] === 'object',
+  ) as ThemeTypings['colors'][];
+
+  return (
+    <Wrap spacing={4}>
+      {COLOR_LIST.map((colorScheme) => (
+        <WrapItem key={colorScheme}>
+          <Flex
+            align="center"
+            justify="center"
+            direction="column"
+            rowGap={3}
+            bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
+            bgPosition="center"
+          >
+            <HStack>
+              <NumberInput colorScheme={colorScheme} defaultValue={15} max={20} min={10} size="sm">
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+              <Text> {colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}</Text>
+            </HStack>
+            <HStack>
+              <NumberInput colorScheme={colorScheme} defaultValue={15} isDisabled max={20} min={10} size="xs">
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+              <Text>Disabled</Text>
+            </HStack>
+          </Flex>
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 };
 

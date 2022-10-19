@@ -84,8 +84,11 @@ export const ColorScheme = () => {
             bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
             bgPosition="center"
           >
-            <Checkbox colorScheme={colorScheme} size="sm">
+            <Checkbox colorScheme={colorScheme} isChecked size="md">
               {colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}
+            </Checkbox>
+            <Checkbox colorScheme={colorScheme} isChecked isDisabled size="sm">
+              Disabled
             </Checkbox>
           </Flex>
         </WrapItem>

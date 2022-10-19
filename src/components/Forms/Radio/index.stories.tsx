@@ -5,6 +5,7 @@ import {
   AlertIcon,
   Box,
   Divider,
+  Flex,
   Heading,
   HStack,
   Radio,
@@ -14,6 +15,8 @@ import {
   useRadio,
   useRadioGroup,
   useTheme,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 
 export default {
@@ -72,17 +75,35 @@ export const SizeVariant = () => {
 };
 
 export const ColorScheme = () => {
+  const theme = useTheme();
+
+  const colorsProps = theme.colors;
+  const COLOR_LIST = Object.keys(colorsProps).filter(
+    (color) => typeof colorsProps[color] === 'object',
+  ) as ThemeTypings['colors'][];
+
   return (
-    <RadioGroup defaultValue="2">
-      <Stack direction="row" spacing={5}>
-        <Radio colorScheme="red" value="1">
-          Radio
-        </Radio>
-        <Radio colorScheme="green" value="2">
-          Radio
-        </Radio>
-      </Stack>
-    </RadioGroup>
+    <Wrap spacing={4}>
+      {COLOR_LIST.map((colorScheme) => (
+        <WrapItem key={colorScheme}>
+          <Flex
+            align="center"
+            justify="center"
+            direction="column"
+            rowGap={3}
+            bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
+            bgPosition="center"
+          >
+            <Radio colorScheme={colorScheme} isChecked size="md">
+              {colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}
+            </Radio>
+            <Radio colorScheme={colorScheme} disabled isChecked size="sm">
+              Disabled
+            </Radio>
+          </Flex>
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 };
 

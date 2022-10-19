@@ -2,13 +2,16 @@ import { ChangeEvent, useState } from 'react';
 
 import { CheckIcon } from '@chakra-ui/icons';
 import {
+  Box,
   Center,
   Checkbox,
   CheckboxGroup,
+  Divider,
   FormControl,
   FormErrorMessage,
   FormHelperText,
   FormLabel,
+  Heading,
   HStack,
   Input,
   NumberDecrementStepper,
@@ -20,6 +23,8 @@ import {
   RadioGroup,
   Select,
   Stack,
+  ThemeTypings,
+  useTheme,
   VStack,
 } from '@chakra-ui/react';
 
@@ -36,6 +41,34 @@ export const Default = () => {
       <Input type="email" />
       <FormHelperText>We&apos;ll never share your email.</FormHelperText>
     </FormControl>
+  );
+};
+
+export const SizeVariant = () => {
+  const theme = useTheme();
+
+  const formControlProps = theme.components.Form;
+  const VARIANT_LIST = Object.keys(
+    formControlProps?.variants || {},
+  ) as ThemeTypings['components']['Form']['variants'][];
+  const SIZE_LIST = Object.keys(formControlProps?.sizes || {}) as ThemeTypings['components']['Form']['sizes'][];
+
+  return (
+    <Stack divider={<Divider />} spacing={3}>
+      {VARIANT_LIST.length &&
+        VARIANT_LIST.map((variant) => (
+          <Box key={variant}>
+            <Heading mb="16px">{(variant as string).toUpperCase()}</Heading>
+            {SIZE_LIST.map((size) => (
+              <FormControl key={size} size={size} variant={variant}>
+                <FormLabel>{(size as string).toUpperCase()}</FormLabel>
+                <Input type="email" />
+                <FormHelperText>We&apos;ll never share your email.</FormHelperText>
+              </FormControl>
+            ))}
+          </Box>
+        ))}
+    </Stack>
   );
 };
 

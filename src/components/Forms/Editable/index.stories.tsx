@@ -2,17 +2,23 @@ import { useState } from 'react';
 
 import { CheckIcon, CloseIcon, EditIcon } from '@chakra-ui/icons';
 import {
+  Box,
   ButtonGroup,
+  Divider,
   Editable,
   EditableInput,
   EditablePreview,
   EditableTextarea,
   Flex,
+  Heading,
   IconButton,
   Input,
+  Stack,
+  ThemeTypings,
   Tooltip,
   useColorModeValue,
   useEditableControls,
+  useTheme,
 } from '@chakra-ui/react';
 
 export default {
@@ -27,6 +33,32 @@ export const Default = () => {
       <EditablePreview />
       <EditableInput />
     </Editable>
+  );
+};
+
+export const SizeVariant = () => {
+  const theme = useTheme();
+
+  const editableProps = theme.components.Editable;
+  const VARIANT_LIST = Object.keys(editableProps.variants) as ThemeTypings['components']['Editable']['variants'][];
+  const SIZE_LIST = Object.keys(editableProps.sizes) as ThemeTypings['components']['Editable']['sizes'][];
+  console.log(editableProps);
+
+  return (
+    <Stack divider={<Divider />} spacing={3}>
+      {VARIANT_LIST.length &&
+        VARIANT_LIST.map((variant) => (
+          <Box key={variant}>
+            <Heading mb="16px">{(variant as string).toUpperCase()}</Heading>
+            {SIZE_LIST.map((size) => (
+              <Editable key={size} defaultValue={(size as string).toUpperCase()} size={size} variant={variant}>
+                <EditablePreview />
+                <EditableInput />
+              </Editable>
+            ))}
+          </Box>
+        ))}
+    </Stack>
   );
 };
 

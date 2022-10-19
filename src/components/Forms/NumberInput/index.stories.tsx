@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
 import {
+  Box,
   Button,
   Divider,
   Flex,
+  Heading,
   HStack,
   Input,
   NumberDecrementStepper,
@@ -16,6 +18,7 @@ import {
   SliderThumb,
   SliderTrack,
   Stack,
+  Text,
   ThemeTypings,
   useNumberInput,
   useTheme,
@@ -36,6 +39,68 @@ export const Default = () => {
         <NumberDecrementStepper />
       </NumberInputStepper>
     </NumberInput>
+  );
+};
+
+export const SizeVariant = () => {
+  const theme = useTheme();
+
+  const numberInputProps = theme.components.NumberInput;
+  const VARIANT_LIST = Object.keys(
+    numberInputProps.variants,
+  ) as ThemeTypings['components']['NumberInput']['variants'][];
+  const SIZE_LIST = Object.keys(numberInputProps.sizes) as ThemeTypings['components']['NumberInput']['sizes'][];
+
+  return (
+    <Stack divider={<Divider />} spacing={3}>
+      {VARIANT_LIST.length ? (
+        VARIANT_LIST.map((variant) => (
+          <Box key={variant}>
+            <Heading mb="16px">{(variant as string).toUpperCase()}</Heading>
+            <Stack spacing={3}>
+              {SIZE_LIST.map((size) => (
+                <HStack key={size}>
+                  <NumberInput defaultValue={15} min={10} size={size} variant={variant}>
+                    <NumberInputField />
+                    <NumberInputStepper>
+                      <NumberIncrementStepper />
+                      <NumberDecrementStepper />
+                    </NumberInputStepper>
+                  </NumberInput>
+                  <Text>{size.toUpperCase()}</Text>
+                </HStack>
+              ))}
+
+              <HStack>
+                <NumberInput defaultValue={15} isDisabled min={10} size="sm" variant={variant}>
+                  <NumberInputField />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
+                <Text>Disabled</Text>
+              </HStack>
+            </Stack>
+          </Box>
+        ))
+      ) : (
+        <Stack spacing={3}>
+          {SIZE_LIST.map((size) => (
+            <HStack key={size}>
+              <NumberInput defaultValue={15} min={10} size={size}>
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+              <Text>Disabled</Text>
+            </HStack>
+          ))}
+        </Stack>
+      )}
+    </Stack>
   );
 };
 
@@ -113,27 +178,6 @@ export const FormattingAndParsingTheValue = () => {
         <NumberDecrementStepper />
       </NumberInputStepper>
     </NumberInput>
-  );
-};
-
-export const Size = () => {
-  const theme = useTheme();
-
-  const numberInputProps = theme.components.NumberInput;
-  const SIZE_LIST = Object.keys(numberInputProps.sizes) as ThemeTypings['components']['NumberInput']['sizes'][];
-
-  return (
-    <Stack divider={<Divider />} spacing={3}>
-      {SIZE_LIST.map((size) => (
-        <NumberInput key={size} maxW={16} defaultValue={15} min={10} size={size}>
-          <NumberInputField />
-          <NumberInputStepper>
-            <NumberIncrementStepper />
-            <NumberDecrementStepper />
-          </NumberInputStepper>
-        </NumberInput>
-      ))}
-    </Stack>
   );
 };
 

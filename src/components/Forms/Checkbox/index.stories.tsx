@@ -1,6 +1,20 @@
 import { useState } from 'react';
 
-import { Checkbox, CheckboxGroup, Flex, Icon, Stack, ThemeTypings, useTheme, Wrap, WrapItem } from '@chakra-ui/react';
+import {
+  Box,
+  Checkbox,
+  CheckboxGroup,
+  Divider,
+  Flex,
+  Heading,
+  HStack,
+  Icon,
+  Stack,
+  ThemeTypings,
+  useTheme,
+  Wrap,
+  WrapItem,
+} from '@chakra-ui/react';
 import { MdOutlineEmail as MdOutlineEmailIcon } from 'react-icons/md';
 
 export default {
@@ -11,6 +25,42 @@ export default {
 
 export const Default = () => {
   return <Checkbox defaultChecked>Checkbox</Checkbox>;
+};
+
+export const SizeVariant = () => {
+  const theme = useTheme();
+
+  const checkboxProps = theme.components.Checkbox;
+  const VARIANT_LIST = Object.keys(checkboxProps.variants) as ThemeTypings['components']['Checkbox']['variants'][];
+  const SIZE_LIST = Object.keys(checkboxProps.sizes) as ThemeTypings['components']['Checkbox']['sizes'][];
+
+  return (
+    <Stack divider={<Divider />} spacing={3}>
+      {VARIANT_LIST.length ? (
+        VARIANT_LIST.map((variant) => (
+          <Box key={variant}>
+            <Heading mb="16px">{(variant as string).toUpperCase()}</Heading>
+            {SIZE_LIST.map((size) => (
+              <Checkbox key={size} size={size} variant={variant}>
+                {size.toUpperCase()}
+              </Checkbox>
+            ))}
+            <Checkbox isDisabled size="sm" variant={variant}>
+              DISABLED
+            </Checkbox>
+          </Box>
+        ))
+      ) : (
+        <HStack spacing={3}>
+          {SIZE_LIST.map((size) => (
+            <Checkbox key={size} mr="10px" size={size}>
+              {size.toUpperCase()}
+            </Checkbox>
+          ))}
+        </HStack>
+      )}
+    </Stack>
+  );
 };
 
 export const DisabledCheckbox = () => {
@@ -52,23 +102,6 @@ export const ColorScheme = () => {
         </WrapItem>
       ))}
     </Wrap>
-  );
-};
-
-export const Size = () => {
-  const theme = useTheme();
-
-  const checkboxProps = theme.components.Checkbox;
-  const SIZE_LIST = Object.keys(checkboxProps.sizes) as ThemeTypings['components']['Checkbox']['sizes'][];
-
-  return (
-    <Stack direction="row" spacing={5}>
-      {SIZE_LIST.map((size) => (
-        <Checkbox key={size} mr="10px" colorScheme="red" size={size}>
-          {size.toUpperCase()}
-        </Checkbox>
-      ))}
-    </Stack>
   );
 };
 

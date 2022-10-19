@@ -13,6 +13,7 @@ import Link from './components/Link';
 import Modal from './components/Modal';
 import NumberInput from './components/NumberInput';
 import PinInput from './components/PinInput';
+import Radio from './components/Radio';
 import Select from './components/Select';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
@@ -40,6 +41,7 @@ const overrides = {
     Modal,
     NumberInput,
     PinInput,
+    Radio,
     Select,
     Table,
     Tabs,

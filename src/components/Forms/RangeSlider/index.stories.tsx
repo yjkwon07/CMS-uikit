@@ -1,6 +1,7 @@
 import {
   Box,
   Divider,
+  Flex,
   Heading,
   HStack,
   RangeSlider,
@@ -11,6 +12,8 @@ import {
   Text,
   ThemeTypings,
   useTheme,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 import { MdGraphicEq } from 'react-icons/md';
 
@@ -92,14 +95,48 @@ export const SizeVariant = () => {
 };
 
 export const ColorScheme = () => {
+  const theme = useTheme();
+
+  const colorsProps = theme.colors;
+  const COLOR_LIST = Object.keys(colorsProps).filter(
+    (color) => typeof colorsProps[color] === 'object',
+  ) as ThemeTypings['colors'][];
+
   return (
-    <RangeSlider colorScheme="pink" defaultValue={[10, 30]}>
-      <RangeSliderTrack>
-        <RangeSliderFilledTrack />
-      </RangeSliderTrack>
-      <RangeSliderThumb index={0} />
-      <RangeSliderThumb index={1} />
-    </RangeSlider>
+    <Wrap spacing={4}>
+      {COLOR_LIST.map((colorScheme) => (
+        <WrapItem key={colorScheme}>
+          <Flex
+            direction="column"
+            rowGap={3}
+            w="300px"
+            bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
+            bgPosition="center"
+          >
+            <HStack>
+              <RangeSlider colorScheme={colorScheme} defaultValue={[10, 30]} size="md">
+                <RangeSliderTrack>
+                  <RangeSliderFilledTrack />
+                </RangeSliderTrack>
+                <RangeSliderThumb index={0} />
+                <RangeSliderThumb index={1} />
+              </RangeSlider>
+              <Text>{colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}</Text>
+            </HStack>
+            <HStack>
+              <RangeSlider colorScheme={colorScheme} defaultValue={[10, 30]} isDisabled size="sm">
+                <RangeSliderTrack>
+                  <RangeSliderFilledTrack />
+                </RangeSliderTrack>
+                <RangeSliderThumb index={0} />
+                <RangeSliderThumb index={1} />
+              </RangeSlider>
+              <Text>Disabled</Text>
+            </HStack>
+          </Flex>
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 };
 

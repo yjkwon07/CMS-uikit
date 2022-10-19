@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {
   Box,
   Divider,
+  Flex,
   Heading,
   HStack,
   Slider,
@@ -15,6 +16,8 @@ import {
   ThemeTypings,
   Tooltip,
   useTheme,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 import { MdGraphicEq } from 'react-icons/md';
 
@@ -92,13 +95,46 @@ export const SizeVariant = () => {
 };
 
 export const ColorScheme = () => {
+  const theme = useTheme();
+
+  const colorsProps = theme.colors;
+  const COLOR_LIST = Object.keys(colorsProps).filter(
+    (color) => typeof colorsProps[color] === 'object',
+  ) as ThemeTypings['colors'][];
+
   return (
-    <Slider aria-label="slider-ex-2" colorScheme="pink" defaultValue={30}>
-      <SliderTrack>
-        <SliderFilledTrack />
-      </SliderTrack>
-      <SliderThumb />
-    </Slider>
+    <Wrap spacing={4}>
+      {COLOR_LIST.map((colorScheme) => (
+        <WrapItem key={colorScheme}>
+          <Flex
+            direction="column"
+            rowGap={3}
+            w="300px"
+            bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
+            bgPosition="center"
+          >
+            <HStack>
+              <Slider colorScheme={colorScheme} defaultValue={30} size="md">
+                <SliderTrack>
+                  <SliderFilledTrack />
+                </SliderTrack>
+                <SliderThumb />
+              </Slider>
+              <Text>{colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}</Text>
+            </HStack>
+            <HStack>
+              <Slider colorScheme={colorScheme} defaultValue={30} isDisabled size="sm">
+                <SliderTrack>
+                  <SliderFilledTrack />
+                </SliderTrack>
+                <SliderThumb />
+              </Slider>
+              <Text>Disabled</Text>
+            </HStack>
+          </Flex>
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 };
 

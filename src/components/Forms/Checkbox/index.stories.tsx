@@ -63,17 +63,6 @@ export const SizeVariant = () => {
   );
 };
 
-export const DisabledCheckbox = () => {
-  return (
-    <Stack direction="row" spacing={5}>
-      <Checkbox isDisabled>Checkbox</Checkbox>
-      <Checkbox defaultChecked isDisabled>
-        Checkbox
-      </Checkbox>
-    </Stack>
-  );
-};
-
 export const ColorScheme = () => {
   const theme = useTheme();
 
@@ -102,6 +91,17 @@ export const ColorScheme = () => {
         </WrapItem>
       ))}
     </Wrap>
+  );
+};
+
+export const DisabledCheckbox = () => {
+  return (
+    <Stack direction="row" spacing={5}>
+      <Checkbox isDisabled>Checkbox</Checkbox>
+      <Checkbox defaultChecked isDisabled>
+        Checkbox
+      </Checkbox>
+    </Stack>
   );
 };
 

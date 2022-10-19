@@ -76,6 +76,7 @@ export const SizeVariant = () => {
                 <PinInputField />
                 <PinInputField />
               </PinInput>
+              <Text>{size.toUpperCase()}</Text>
             </HStack>
           ))}
         </Stack>

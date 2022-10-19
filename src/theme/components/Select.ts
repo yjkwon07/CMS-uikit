@@ -1,18 +1,12 @@
 import type { ComponentStyleConfig } from '@chakra-ui/theme';
 
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/components/select.ts */
+
 const Select: ComponentStyleConfig = {
-  variants: {
-    outline: {
-      field: {
-        borderRadius: 'lg',
-        borderColor: 'border.500',
-        color: 'gray.900',
-      },
-    },
-  },
-  defaultProps: {
-    focusBorderColor: 'brand.500',
-  },
+  baseStyle: {},
+  variants: {},
+  sizes: {},
+  defaultProps: {},
 };
 
 export default Select;

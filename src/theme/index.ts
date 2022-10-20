@@ -16,6 +16,7 @@ import PinInput from './components/PinInput';
 import Radio from './components/Radio';
 import Select from './components/Select';
 import Slider from './components/Slider';
+import Switch from './components/Switch';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
 import { foundations } from './foundations';
@@ -45,6 +46,7 @@ const overrides = {
     Radio,
     Select,
     Slider,
+    Switch,
     Table,
     Tabs,
   },

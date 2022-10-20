@@ -19,6 +19,7 @@ import Slider from './components/Slider';
 import Switch from './components/Switch';
 import Table from './components/Table';
 import Tabs from './components/Tabs';
+import Textarea from './components/Textarea';
 import { foundations } from './foundations';
 import global from './global';
 import layerStyles from './layerStyles';
@@ -49,6 +50,7 @@ const overrides = {
     Switch,
     Table,
     Tabs,
+    Textarea,
   },
 };
 

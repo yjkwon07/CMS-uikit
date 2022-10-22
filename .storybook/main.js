@@ -7,7 +7,6 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-links',
-    '@chakra-ui/storybook-addon',
   ],
   core: {
     builder: 'webpack5',

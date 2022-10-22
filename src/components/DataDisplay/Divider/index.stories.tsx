@@ -1,12 +1,12 @@
 import {
-  Alert,
-  AlertIcon,
   Box,
-  Code,
+  Center,
   Divider,
   Flex,
   Heading,
+  HStack,
   Stack,
+  Text,
   ThemeTypings,
   useTheme,
   Wrap,
@@ -14,29 +14,21 @@ import {
 } from '@chakra-ui/react';
 
 export default {
-  title: 'DataDisplay/Code',
-  component: Code,
+  title: 'DataDisplay/Divider',
+  component: Divider,
   argTypes: {},
 };
 
 export const Default = () => {
-  return (
-    <>
-      <Alert status="info">
-        <AlertIcon />
-        font family of `mono` for displaying code.
-      </Alert>
-      <Code>Hello world</Code>
-    </>
-  );
+  return <Divider />;
 };
 
 export const SizeVariant = () => {
   const theme = useTheme();
 
-  const codeProps = theme.components.Code;
-  const VARIANT_LIST = Object.keys(codeProps.variants || {}) as ThemeTypings['components']['Code']['variants'][];
-  const SIZE_LIST = Object.keys(codeProps.sizes || {}) as ThemeTypings['components']['Code']['sizes'][];
+  const dividerProps = theme.components.Divider;
+  const VARIANT_LIST = Object.keys(dividerProps.variants || {}) as ThemeTypings['components']['Divider']['variants'][];
+  const SIZE_LIST = Object.keys(dividerProps.sizes || {}) as ThemeTypings['components']['Divider']['sizes'][];
 
   return (
     <Stack divider={<Divider />} spacing={3}>
@@ -47,12 +39,16 @@ export const SizeVariant = () => {
             <Stack spacing={3}>
               {SIZE_LIST.length ? (
                 SIZE_LIST.map((size) => (
-                  <Code key={size} size={size} variant={variant}>
-                    {(size as string).toUpperCase()}
-                  </Code>
+                  <HStack key={size}>
+                    <Divider size={size} variant={variant} />
+                    <Text>{(size as string).toUpperCase()}</Text>
+                  </HStack>
                 ))
               ) : (
-                <Code variant={variant}>{variant}</Code>
+                <HStack>
+                  <Divider variant={variant} />
+                  <Text>{variant}</Text>
+                </HStack>
               )}
             </Stack>
           </Box>
@@ -61,9 +57,10 @@ export const SizeVariant = () => {
         <Stack spacing={3}>
           {SIZE_LIST.length &&
             SIZE_LIST.map((size) => (
-              <Code key={size} size={size}>
-                {(size as string).toUpperCase()}
-              </Code>
+              <HStack key={size}>
+                <Divider size={size} />
+                <Text>{(size as string).toUpperCase()}</Text>
+              </HStack>
             ))}
         </Stack>
       )}
@@ -90,10 +87,21 @@ export const ColorScheme = () => {
             bgImage={colorScheme.includes('white') ? 'url("https://bit.ly/2Z4KKcF")' : undefined}
             bgPosition="center"
           >
-            <Code colorScheme={colorScheme}>{colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}</Code>
+            <HStack>
+              <Divider colorScheme={colorScheme} />
+              <Text>{colorScheme.charAt(0).toUpperCase() + colorScheme.slice(1)}</Text>
+            </HStack>
           </Flex>
         </WrapItem>
       ))}
     </Wrap>
+  );
+};
+
+export const Orientation = () => {
+  return (
+    <Center h="50px">
+      <Divider orientation="vertical" />
+    </Center>
   );
 };

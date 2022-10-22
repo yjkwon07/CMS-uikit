@@ -4,6 +4,7 @@ import Avatar from './components/Avatar';
 import Badge from './components/Badge';
 import Button from './components/Button';
 import Checkbox from './components/Checkbox';
+import Code from './components/Code';
 import Container from './components/Container';
 import Divider from './components/Divider';
 import Editable from './components/Editable';
@@ -35,6 +36,7 @@ const overrides = {
     Badge,
     Button,
     Checkbox,
+    Code,
     Container,
     Divider,
     Editable,

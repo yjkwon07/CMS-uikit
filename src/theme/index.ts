@@ -10,6 +10,7 @@ import Divider from './components/Divider';
 import Editable from './components/Editable';
 import Heading from './components/Heading';
 import Input from './components/Input';
+import Kbd from './components/Kbd';
 import Link from './components/Link';
 import Modal from './components/Modal';
 import NumberInput from './components/NumberInput';
@@ -42,6 +43,7 @@ const overrides = {
     Editable,
     Heading,
     Input,
+    Kbd,
     Link,
     Modal,
     NumberInput,

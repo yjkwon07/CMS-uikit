@@ -1,11 +1,12 @@
 import type { ComponentStyleConfig } from '@chakra-ui/theme';
 
-import colors from '../foundations/colors';
+/** @see https://github.com/chakra-ui/chakra-ui/blob/main/packages/components/theme/src/components/divider.ts */
 
 const Divider: ComponentStyleConfig = {
-  baseStyle: {
-    // borderColor: `${colors.border[500]}`,
-  },
+  baseStyle: {},
+  variants: {},
+  sizes: {},
+  defaultProps: {},
 };
 
 export default Divider;
